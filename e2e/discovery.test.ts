@@ -358,9 +358,7 @@ test("home and notebook avoid geographic JavaScript; a failed geographic import 
     .getByRole("button", { name: "Utiliser ma position actuelle" })
     .click();
   await expect(
-    page.getByText(
-      "La localisation est indisponible. Tu peux publier sans lieu.",
-    ),
+    page.getByText("La localisation est indisponible."),
   ).toBeVisible();
   await expect(
     page.getByRole("button", { name: "Utiliser ma position actuelle" }),
@@ -605,7 +603,7 @@ for (const download of ["delayed", "failed"] as const) {
       } else {
         await expect(
           page.getByText(
-            "La zone choisie n’a pas pu être chargée. Le lieu précédent est conservé. Choisis à nouveau une zone sur la carte.",
+            "La zone choisie n’a pas pu être chargée. Choisis à nouveau une zone sur la carte.",
           ),
         ).toBeVisible();
         expect(

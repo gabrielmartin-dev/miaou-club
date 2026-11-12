@@ -14,11 +14,6 @@ export function AccessNotice({ unavailable = false }: Props) {
         miaou club
       </a>
       <h1>{unavailable ? "Le club fait une pause." : "Accès réservé."}</h1>
-      <p className="account-lead">
-        {unavailable
-          ? "Il est temporairement indisponible."
-          : "Le club est réservé aux membres admis."}
-      </p>
       <a className="button" href="/profil">
         Se connecter
       </a>

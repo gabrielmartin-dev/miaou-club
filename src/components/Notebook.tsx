@@ -135,8 +135,7 @@ export function Notebook({ id }: { id?: string }) {
           <h1>Mon petit carnet.</h1>
           {!group && !busy && (
             <p className="encounter-privacy">
-              Ton espace personnel reste accessible. La publication et l’accès
-              au groupe sont fermés pour ton compte.
+              La publication et l’accès au groupe sont fermés pour ton compte.
             </p>
           )}
           <div className="encounter-actions">
@@ -191,7 +190,7 @@ export function Notebook({ id }: { id?: string }) {
           </a>
           {published && !editing && (
             <p className="encounter-success" role="status">
-              C’est publié : ta rencontre est dans ton carnet.
+              C’est publié.
             </p>
           )}
           {entry &&

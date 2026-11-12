@@ -220,7 +220,6 @@ export function FriendsPanel({
         Retour au profil
       </a>
       <h1>Les amis du club.</h1>
-      <p>Ta liste reste personnelle.</p>
       <form
         className="friend-search"
         onSubmit={(e) => {

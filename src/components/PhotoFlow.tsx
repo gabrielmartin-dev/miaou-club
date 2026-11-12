@@ -101,7 +101,7 @@ export function PhotoFlow() {
               } catch {
                 if (!alive) return;
                 setMessage(
-                  "La zone choisie n’a pas pu être chargée. Le lieu précédent est conservé. Choisis à nouveau une zone sur la carte.",
+                  "La zone choisie n’a pas pu être chargée. Choisis à nouveau une zone sur la carte.",
                 );
               }
               sessionStorage.removeItem("miaou-selected-cell-" + me.user.id);

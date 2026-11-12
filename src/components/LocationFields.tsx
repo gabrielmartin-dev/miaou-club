@@ -49,9 +49,7 @@ export function LocationFields({
   const editing = original !== undefined;
   function locate() {
     if (!navigator.geolocation) {
-      setMessage(
-        "La localisation est indisponible. Tu peux publier sans lieu.",
-      );
+      setMessage("La localisation est indisponible.");
       return;
     }
     setBusy(true);
@@ -66,9 +64,7 @@ export function LocationFields({
         } catch {
           if (attempt !== generation.current) return;
           setBusy(false);
-          setMessage(
-            "La localisation est indisponible. Tu peux publier sans lieu.",
-          );
+          setMessage("La localisation est indisponible.");
           return;
         }
         if (attempt !== generation.current) return;
@@ -87,9 +83,7 @@ export function LocationFields({
             "Zone proposée. Vérifie qu’elle correspond à cette rencontre.",
           );
         } catch {
-          setMessage(
-            "Position hors périmètre ou trop imprécise. Tu peux publier sans lieu.",
-          );
+          setMessage("Position hors périmètre ou trop imprécise.");
         } finally {
           setBusy(false);
         }
@@ -97,9 +91,7 @@ export function LocationFields({
       () => {
         if (attempt !== generation.current) return;
         setBusy(false);
-        setMessage(
-          "Position refusée ou indisponible. Tu peux publier sans lieu.",
-        );
+        setMessage("Position refusée ou indisponible.");
       },
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 0 },
     );
