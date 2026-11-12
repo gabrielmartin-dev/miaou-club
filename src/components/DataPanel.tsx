@@ -45,9 +45,6 @@ export function DataPanel({
         Retour au profil
       </a>
       <h1>Tes données</h1>
-      <p>
-        Ces actions restent accessibles après suspension ou retrait du club.
-      </p>
       <p role="status">{message}</p>
       <h2>Copier tes données</h2>
       <p>
@@ -117,7 +114,7 @@ export function DataPanel({
       <h2>Supprimer mon compte</h2>
       <p>
         Ton profil et tes rencontres disparaissent aussitôt, puis leurs fichiers
-        sont purgés. C’est définitif.
+        sont purgés.
       </p>
       <form
         onSubmit={(e) => {

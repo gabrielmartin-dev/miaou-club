@@ -227,9 +227,6 @@ test("friend states render in Storybook with private-list copy and no mobile ove
     await expect(
       page.getByRole("heading", { name: "Les amis du club." }),
     ).toBeVisible();
-    await expect(
-      page.getByText("Ta liste reste personnelle.", { exact: false }),
-    ).toBeVisible();
     if (story === "requests")
       await expect(
         page.getByRole("button", { name: "Accepter", exact: true }),

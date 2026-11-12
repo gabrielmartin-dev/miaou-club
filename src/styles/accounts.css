@@ -249,9 +249,6 @@
 .account-panel h1 {
   margin-bottom: var(--space-3);
 }
-.account-lead {
-  color: var(--muted);
-}
 /* Le message vide ne crée pas d'écart avant le bouton. */
 .account-panel form > .account-message:empty {
   min-height: 0;
